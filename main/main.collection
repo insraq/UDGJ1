@@ -68,8 +68,8 @@ embedded_instances {
     w: 1.0
   }
   scale3 {
-    x: 1.0
-    y: 1.0
+    x: 2.0
+    y: 0.5
     z: 1.0
   }
 }
@@ -77,7 +77,7 @@ embedded_instances {
   id: "player"
   data: "components {\n"
   "  id: \"main\"\n"
-  "  component: \"/scripts/main.script\"\n"
+  "  component: \"/main/main.script\"\n"
   "  position {\n"
   "    x: 0.0\n"
   "    y: 0.0\n"
