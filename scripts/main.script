@@ -1,5 +1,8 @@
 --[[ Generated with https://github.com/Perryvw/TypescriptToLua ]]
-local inspect = require("target.lib.inspect");
+local __TSTL_logic = require("logic.logic");
+local GameLogic = __TSTL_logic.GameLogic;
+local gl = GameLogic.new();
+local inspect = require("lib.inspect");
 local camera = require("orthographic.camera");
 init = function(self)
     local socket = require("builtins.scripts.socket");

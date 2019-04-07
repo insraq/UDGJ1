@@ -1,6 +1,6 @@
 const socket: ISocket = require("socket");
 
-function run_server(this: void) {
+function run_udp_server(this: void) {
     const udp = socket.udp();
     const [return_code, err] = udp.setsockname("*", 6000);
     if (return_code !== 1) {
@@ -13,5 +13,4 @@ function run_server(this: void) {
         console.log(data, err_rec);
     }
 }
-
-run_server();
+run_udp_server();

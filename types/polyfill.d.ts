@@ -12,8 +12,32 @@ interface ICameraFollowOption {
 
 type Inspect = (this: void, param: any) => string;
 
+/** @noSelf */
 interface ISocket {
-    udp(this: void): IUnconnected;
+    udp(): IUnconnected;
+    /** @tupleReturn */
+    tcp(): [ITcpMaster, string];
+}
+
+interface ITcpMaster {
+    /** @tupleReturn */
+    bind(address: string, port: number): [number, string];
+    /** @tupleReturn */
+    listen(backlog?: number): [number, string]
+}
+
+interface IServer {
+    /** @tupleReturn */
+    accept(): [IClient, string];
+    /** @tupleReturn */
+    close(backlog: number): [number, string]
+}
+
+interface IClient {
+    /** @tupleReturn */
+    receive(pattern?: (string | number), prefix?: string): [string, string, string];
+    /** @tupleReturn */
+    send(data: string, startIndex?: number, endIndex?: number): [number, string, number];
 }
 
 interface IUnconnected {

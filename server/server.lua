@@ -1,6 +1,6 @@
 --[[ Generated with https://github.com/Perryvw/TypescriptToLua ]]
 local socket = require("socket");
-run_server = function()
+run_udp_server = function()
     local udp = socket.udp();
     local return_code, err = udp:setsockname("*", 6000);
     if return_code ~= 1 then
@@ -13,4 +13,4 @@ run_server = function()
         print(data, err_rec);
     end
 end;
-run_server();
+run_udp_server();

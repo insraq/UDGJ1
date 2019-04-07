@@ -1,4 +1,7 @@
-const inspect: Inspect = require("target.lib.inspect");
+import { GameLogic } from "../logic/logic";
+
+const gl = new GameLogic();
+const inspect: Inspect = require("lib.inspect");
 const camera: ICamera = require("orthographic.camera");
 
 function init(this: any) {
