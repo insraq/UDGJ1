@@ -4,8 +4,12 @@ This is the starter project for using Defold with TypeScript.
 
 ## Structure
 
+```
 - src (TypeScript source)
-- target (Compiled Lua source)
+|-- lib (Lua libs)
+|-- types (TypeScript type definition files)
+-- target (Compiled Lua source)
+```
 
 ## Get Started
 
